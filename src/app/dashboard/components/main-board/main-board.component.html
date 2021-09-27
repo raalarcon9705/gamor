@@ -1,0 +1,12 @@
+<section class="p-2 ad">
+  <app-ad-section></app-ad-section>
+</section>
+<section class="bg-primary px-1 pos-relative" style="min-height: 560px;">
+  <app-main-section
+    [characters]="searchSection.selectedCharacters"
+    [game]="searchSection.selectedGame"
+    (removeCharacter)="searchSection.removeCharacter($event)"></app-main-section>
+</section>
+<section class="p-2 flex column content-center">
+  <app-search-section #searchSection></app-search-section>
+</section>

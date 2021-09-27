@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "gamor-5ea98": {
+      "hosting": {
+        "gamor": [
+          "gamor-5ea98"
+        ]
+      }
+    }
+  }
+}

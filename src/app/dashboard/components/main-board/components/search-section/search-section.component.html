@@ -1,0 +1,93 @@
+<div>
+  <div class="mb-2">
+    <div>
+      <span class="numeration large">01. </span> 
+      <span class="bold">Choose Platform</span>
+    </div>
+    
+    <div class="py-1">
+      <ng-container [ngTemplateOutlet]="selectPlatformTemplate"></ng-container>
+    </div>
+  </div>
+
+
+  <div class="">
+    <div class=" mb-1">
+      <span class="numeration large">02. </span> 
+      <span class="bold">Searching Game</span>
+    </div>
+    <div class="">
+      <div class="bg-section round-sm">
+        <div class="flex border-bottom items-center">
+          <span class="expand px-1 bold" style="font-size: 90%;">COD Warzone</span>
+          <button class="btn icon plain" (click)="showSearchDialog()"><i class="iconify" data-icon="carbon:settings-adjust"></i></button>
+        </div>
+        <div class="p-1">
+          <div>
+            <div class="flex wrap mb-1 users">
+              <div class="row items-center" *ngFor="let character of characters$|async;trackBy:trackByUid; let i = index" [class.disabled]="!isAvailable(character)">
+                <span class="no">{{ i + 1 }}</span>
+                <span class="expand bold name">{{ character.name }}</span>
+                <div class="img expand">
+                  <img [src]="character.thumb" alt="" class="character-image">
+                </div>
+                <button class="add" (click)="addCharacter(character)">
+                  <i class="iconify" data-icon="dashicons:plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex">
+            <button class="btn inverse block squared elevated" (click)="showSearchDialog()">Search Now</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #searchDialog>
+  <div class="modal-header flex">
+    <h5 class="spacing-0 expand flex items-center content-center">Search Game</h5>
+    <button class="btn icon spacing-0" (click)="closeDialog()">
+      <i class="iconify" data-icon="eva:close-fill"></i>
+    </button>
+  </div>
+  <div class="modal-content">
+    <ng-container [ngTemplateOutlet]="selectPlatformTemplate"></ng-container>
+    <!-- <form>
+      <div class="input flex">
+        <div class="expand">
+          <label for="search">Search</label>
+          <div class="flex items-center">
+            <div class="expand"><input type="search" placeholder="Search you game"></div>
+            <div>
+              <button class="btn icon">
+                <i class="iconify" data-icon="fe:search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form> -->
+
+    <div class="results flex column py-1">
+      <div class="flex mb-1 game" *ngFor="let game of games$|async" (click)="setGame(game)">
+        <div style="">
+          <img [src]="game.cover" alt="">
+        </div>
+        <div class="expand flex items-center bold px-1">{{ game.name }}</div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #selectPlatformTemplate>
+  <div class="bg-section round flex choose">
+    <button class="btn {{platform === 'Party' ? 'info' : 'plain'}}" (click)="setPlatform('Party')">Party</button>
+    <button class="btn {{platform === 'Match' ? 'info' : 'plain'}}" (click)="setPlatform('Match')">Match</button>
+    <button class="btn {{platform === 'Streams' ? 'info' : 'plain'}}" (click)="setPlatform('Streams')">Streams</button>
+  </div>
+</ng-template>

@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+
+  ::ng-deep {
+    :host {
+      display: flex;
+      height: 100%;
+      align-items: center;
+    }
+
+    .auth-form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: var(--area-bg-color);
+      // box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+      padding: 15px;
+      border-radius: 1.5rem;
+    }
+
+    h1,
+    h5 {
+      text-align: center;
+    }
+
+    [disabled] {
+      opacity: 0.7;
+    }
+  }
+}

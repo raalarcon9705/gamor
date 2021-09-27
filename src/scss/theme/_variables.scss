@@ -1,0 +1,43 @@
+body:not(.dark) {
+  --app-bg-color: #f1f2f5;
+  --area-bg-color: #f9fafe;
+  --section-bg-color: #ffffff;
+
+  --primary-rgb: 127, 52, 239;
+  --secondary-rgb: 249, 134, 68;
+  --info-rgb: 244, 243, 244;
+  --inverse-rgb: 27, 32, 41;
+
+  --primary-color: rgb(var(--primary-rgb));
+  --secondary-color: rgb(var(--secondary-rgb));
+  --info-color: rgb(var(--info-rgb));
+  --inverse-color: rgb(var(--inverse-rgb));
+
+  --text-color: #242528;
+
+  --btn-border-radius: 1.5rem;
+  --border-radius: 1.5rem;
+  --shadow-color: #242528;
+}
+
+body.dark {
+  --app-bg-color: #1b2029;
+  --area-bg-color: #232730;
+  --section-bg-color: #1b2029;
+
+  --primary-rgb: 249, 134, 68;
+  --secondary-rgb: 127, 52, 239;
+  --info-rgb: 51, 53, 63;
+  --inverse-rgb: 255, 255;
+
+  --primary-color: rgb(var(--primary-rgb));
+  --secondary-color: rgb(var(--secondary-rgb));
+  --info-color: rgb(var(--info-rgb));
+  --inverse-color: rgb(var(--inverse-rgb));
+
+  --text-color: #c3c8d1;
+
+  --btn-border-radius: 1.5rem;
+  --border-radius: 1.5rem;
+  --shadow-color: #242528;
+}

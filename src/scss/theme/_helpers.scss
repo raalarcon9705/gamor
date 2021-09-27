@@ -1,0 +1,162 @@
+.bg-primary {
+  background-color: var(--primary-color);
+}
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+.bg-info {
+  background-color: var(--info-color);
+}
+.bg-inverse {
+  background-color: var(--inverse-color);
+}
+.bg-blur {
+  backdrop-filter: blur(3.1px);
+  background-color: #ffffff54;
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-section {
+  background-color: var(--section-bg-color);
+}
+
+// TEXT COLOR
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+.text-info {
+  color: var(--info-color);
+}
+.text-inverse {
+  color: var(--inverse-color);
+}
+.text-white {
+  color: #fff;
+}
+
+.text-body {
+  color: var(--text-color);
+}
+
+// SPACING
+.p-1,
+.px-1 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.p-1,
+.py-1 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.p-2,
+.px-2 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.p-2,
+.py-2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.pt-2 {
+  padding-top: 30px;
+}
+.pt-1 {
+  padding-top: 15px;
+}
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.mb-1 {
+  margin-bottom: 15px;
+}
+.mb-2 {
+  margin-bottom: 30px;
+}
+.mb-3 {
+  margin-bottom: 54px;
+}
+.m-0 {
+  margin: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.spacing-0 {
+  padding: 0;
+  margin: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+// TEXT ALIGN
+.text-center {
+  text-align: center;
+}
+
+// BOX DISPOSITION
+.pos-relative {
+  position: relative;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+
+.expand {
+  flex: 1;
+}
+
+.flex {
+  display: flex;
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.column {
+    flex-direction: column;
+  }
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.content-center {
+  justify-content: center;
+}
+
+.round {
+  border-radius: var(--border-radius);
+}
+.round-sm {
+  border-radius: 7px;
+}
+
+// Borders
+.border-bottom {
+  border-bottom: 1px solid #f4f3f4;
+}

@@ -1,0 +1,37 @@
+<div class="py-2 text-center">
+  <h2 class="text-white spacing-0">{{ game?.name }}</h2>
+  <p class="spacing-0 bold">Join Live Stream</p>
+</div>
+<div class="text-center py-1">
+  <span class="btn white bold text-primary pos-relative">
+    <!-- 11 : 45 -->
+    {{ countDown$|async }}
+    <button class="btn icon pos-absolute bg-blur text-white btn-add">
+      <i class="iconify" data-icon="fe:user-plus"></i>
+    </button>
+  </span>
+</div>
+<div class="selected-player" *ngIf="selectedCharacter">
+  <img [src]="selectedCharacter.image" alt="">
+</div>
+
+<div class="players">
+  <div class="pos-relative">
+    <div class="player-item" *ngFor="let character of characters">
+      <button class="btn icon bg-blur" (click)="clearCharacter(character)">
+        <i class="iconify" data-icon="bx:bx-minus"></i>
+      </button>
+      <div class="character">
+        <img [src]="character.image" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="select-character">
+  <div class="player-item" *ngFor="let character of characters$|async" (click)="selectCharacter(character)">
+    <div class="character">
+      <img [src]="character.image" alt="">
+    </div>
+  </div>
+</div>

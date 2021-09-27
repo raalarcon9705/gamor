@@ -1,0 +1,99 @@
+.btn {
+  outline: none;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+
+  &.primary {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: #fff;
+  }
+
+  &.secondary {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    color: #fff;
+  }
+
+  &.info {
+    background-color: var(--info-color);
+    border: 1px solid var(--info-color);
+    color: var(--text-color);
+  }
+
+  &.inverse {
+    background-color: var(--inverse-color);
+    border: 1px solid var(--inverse-color);
+    color: #fff;
+  }
+
+  &.elevated {
+    box-shadow: 0 18px 20px 0 rgb(0 0 0 / 26%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  }
+
+  &.plain {
+    color: inherit;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  &.white {
+    background-color: #fff;
+    border: 1px solid #fff;
+  }
+
+  &.icon {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.block {
+    display: inline-block;
+    width: 100%;
+  }
+
+  &.squared {
+    border-radius: 7px;
+  }
+
+  &.google {
+    background-color: #3367d6;
+    color: #fff;
+  }
+
+  &.light {
+    background-color: var(--info-color);
+  }
+
+  &.sign-up {
+    background-color: rgb(27, 32, 41);
+    color: #fff;
+  }
+}
+
+div {
+  box-sizing: border-box;
+}
+
+body.dark .btn.inverse {
+  color: #242528;
+  background-color: #fff;
+}
+
+body.dark .btn.sign-up {
+  border: 2px solid var(--info-color);
+  box-shadow: none !important;
+}
+
+body:not(.dark) .btn.light {
+  background-color: #fff;
+}

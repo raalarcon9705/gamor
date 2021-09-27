@@ -1,0 +1,22 @@
+:host {
+  // box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  margin-bottom: 100px;
+  background-color: var(--area-bg-color);
+  border-radius: var(--border-radius);
+  min-height: 500px;
+  overflow: hidden;
+  // display: flex;
+  // box-sizing: border-box;
+  display: grid;
+  grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+
+  @media (max-width: 920px) {
+    grid-template-columns: 50% 50%;
+
+    .ad {
+      grid-column-end: 3;
+      grid-column-start: 1;
+      text-align: center;
+    }
+  }
+}

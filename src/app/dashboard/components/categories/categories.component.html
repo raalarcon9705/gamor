@@ -1,0 +1,19 @@
+<h3>Trading Categories</h3>
+<div class="grid">
+  <div *ngFor="let category of categories$|async; let i = index"
+    class="category-card"
+    [style.background-image]="'url(' + category.cover + ')'">
+    <div class="pos-relative">
+      <span class="numeration">/{{(i < 10 ? 0 : '')}}{{(i + 1)}}</span>
+      <span>{{ category.name }}</span>
+      <span><i class="iconify" data-icon="bx:bxs-right-arrow-alt"></i></span>
+    </div>
+  </div>
+  <div  class="category-card">
+    <div class="pos-relative">
+      <span class="numeration">VIEW ALL</span>
+      <span>All categories</span>
+      <span><i class="iconify" data-icon="bx:bxs-right-arrow-alt"></i></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+
+  <div class="auth-form">
+    <h1>Sign Up</h1>
+    <form >
+      <div class="input">
+        <label for="email">Email</label>
+        <input  type="email" id="email">
+      </div>
+
+      <div class="input">
+        <label for="name">Full Name</label>
+        <input  type="text" id="name">
+      </div>
+
+      <div class="input">
+        <label for="password">Password</label>
+        <input  type="password" id="passwod">
+      </div>
+
+      <button  class="btn inverse block" style="margin-left: 0; margin-right: 0;">Register</button>
+    </form>
+
+    <div class="py-1 text-center">
+      Do you already have an account?  <a routerLink=".." class="highlight">Sign in</a>
+    </div>
+
+    <div class="flex column">
+      <h5 class="text-center">Or join us with</h5>
+      <div class="flex content-center">
+        <button (click)="signInWithGoogle()" class="btn icon google"  title="Google">
+          <i class="iconify" data-icon="cib:google"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

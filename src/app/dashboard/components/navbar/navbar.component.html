@@ -1,0 +1,47 @@
+<nav>
+  <div class="sections">
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active-section">Home</a></li>
+      <li><a routerLink="/streams" routerLinkActive="active-section">Streams</a></li>
+      <li><a routerLink="/party" routerLinkActive="active-section">Party</a></li>
+      <li><a routerLink="/premium" routerLinkActive="active-section">Premium</a></li>
+    </ul>
+  </div>
+  <div class="brand">Gamor</div>
+  <div class="auth">
+
+    <ul>
+      <ng-container *ngIf="user$|async as user; else isAnonymous">
+        <li><button class="btn plain">{{ user.displayName?.split(' ')?.splice(0, 2)?.join(' ') || user.email }}</button></li>
+        <li>
+          <div class="avatar">
+            <img *ngIf="user.photoURL" [src]="user.photoURL" alt="">
+          </div>
+        </li>
+        <li>
+          <button class="btn icon inverse" (click)="signOut()">
+            <i class="iconify" data-icon="icon-park-outline:logout"></i>
+          </button>
+        </li>
+      </ng-container>
+      <ng-template #isAnonymous>
+        <li><a class="btn plain" routerLink="/auth">Sign In</a></li>
+        <li><a class="btn sign-up elevated" routerLink="/auth/sign-up">Create account</a></li>
+      </ng-template>
+
+      <li>
+        <ng-container *ngIf="isDarkTheme; else moonIcon">
+          <a class="btn icon inverse" (click)="toggleTheme()">
+            <i class="iconify" data-icon="icomoon-free:sun" ></i>
+          </a>
+        </ng-container>
+        <ng-template #moonIcon>
+          <a class="btn icon inverse" (click)="toggleTheme()">
+            <i class="iconify" data-icon="clarity:moon-solid"></i>
+          </a>
+        </ng-template>
+      </li>
+    </ul>
+
+  </div>
+</nav>
