@@ -49,22 +49,6 @@ nav {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-weight: bold;
-  font-size: 24px;
-
-  &::before {
-    backdrop-filter: blur(3.1px);
-    filter: blur(0px);
-    content: " ";
-    display: block;
-    width: 20px;
-    height: 16px;
-    border-radius: 50%;
-    position: absolute;
-    left: -10px;
-    top: 50%;
-    transform: translateY(-50%) rotate(-45deg);
-  }
 }
 
 @media (max-width: 800px) {

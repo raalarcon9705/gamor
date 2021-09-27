@@ -10,6 +10,10 @@ import { MainSectionComponent } from './components/main-board/components/main-se
 import { SearchSectionComponent } from './components/main-board/components/search-section/search-section.component';
 import { AdSectionComponent } from './components/main-board/components/ad-section/ad-section.component';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { HomeComponent } from './views/home/home.component';
+import { StreamsComponent } from './views/streams/streams.component';
+import { PartyComponent } from './views/party/party.component';
+import { PremiumComponent } from './views/premium/premium.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,10 @@ import { OverlayModule } from '@angular/cdk/overlay';
     MainSectionComponent,
     SearchSectionComponent,
     AdSectionComponent,
+    HomeComponent,
+    StreamsComponent,
+    PartyComponent,
+    PremiumComponent,
   ],
   imports: [CommonModule, DashboardRoutingModule, OverlayModule],
 })

@@ -132,3 +132,24 @@ body.dark .highlight {
     font-weight: bold;
   }
 }
+
+.brand {
+  position: relative;
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--text-color) !important;
+
+  &::before {
+    backdrop-filter: blur(3.1px);
+    filter: blur(0px);
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
